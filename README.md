@@ -66,7 +66,7 @@ nmap -sS 192.168.56.103
 ```
 
 👉 This performs a **SYN scan (stealth scan)** by sending SYN packets to many ports.
-
+![Port Scan](./images/portscan.png)
 ---
 
 ### 3. Stop Capture and Analyse
@@ -78,7 +78,7 @@ tcp.flags.syn == 1 and tcp.flags.ack == 0
 ```
 
 👉 This shows only SYN packets (initial connection attempts)
-
+![SYN Packets](./images/wiresharksyn.png)
 ---
 
 ## 🔍 Observations
@@ -154,10 +154,5 @@ Port scanning is often the **first stage of an attack**, used to:
 
 This lesson demonstrated how attackers use SYN scans to probe systems and how this activity can be detected using Wireshark. Even when a firewall blocks responses, scanning behaviour can still be identified through packet analysis.
 
----
 
-## 🧾 One-Line Summary
 
-A SYN scan sends multiple TCP SYN packets to different ports to identify open services, and it can be detected by observing repeated connection attempts without completing the full TCP handshake.
-
----
